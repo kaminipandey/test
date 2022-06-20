@@ -7,7 +7,7 @@ jobs:
   
   steps:
    - name: Login to GitHub container Registry
-     run: echo ${{ secrets.GITHUB_TOKEN }} | docker login https://docker.pkg.github -u ${{ github.actor }} --password-stdin 
+     run: echo ${{ secrets.GITHUB_TOKEN }} | docker login https://docker.pkg.github.com -u ${{ github.actor }} --password-stdin 
    - name: pull nats
      run: docker pull centos
    - name: Tag the image
