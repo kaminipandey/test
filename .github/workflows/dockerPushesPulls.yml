@@ -11,6 +11,6 @@ jobs:
    - name: pull nats
      run: docker pull centos
    - name: Tag the image
-     run: docker tag centos docker.pkg.github/kaminipandey/test/centos12:123cent
+     run: docker tag centos docker.pkg.github.com/kaminipandey/test/centos12:123cent
    - name: Push image
-     run: docker push docker.pkg.github/kaminipandey/test/centos12:123cent
+     run: docker push docker.pkg.github.com/kaminipandey/test/centos12:123cent
