@@ -1,0 +1,16 @@
+name: Push test package (public)
+on: push
+
+jobs:
+ all:
+  runs-on: self-hosted
+  
+  steps:
+   - name: Login to GitHub container Registry
+     run: echo ${{ secrets.GITHUB_TOKEN }} | docker login docker.pkg.github -u ${{ github.actor }} --password-stdin 
+   - name: pull nats
+     run: docker pull centos
+   - name: Tag the image
+     run: docker tag centos docker.pkg.github/kaminipandey/test/centos12:123cent
+   - name: Push image
+     run: docker push docker.pkg.github/kaminipandey/test/centos12:123cent
