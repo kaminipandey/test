@@ -8,5 +8,5 @@ jobs:
   steps:
    - name: Login to GitHub container Registry
      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin 
-   - name: Tag the image
+   - name: pull
      run: docker pull ghcr.io/kaminipandey/docker-workflow-test/centos12:123cent
