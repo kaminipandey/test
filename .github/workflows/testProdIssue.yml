@@ -9,4 +9,4 @@ jobs:
    - name: Login to GitHub container Registry
      run: echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin 
    - name: pull 1
-     run: docker pull ghcr.io/kaminipandey/docker-workflow-test/centos12:123cent
+     run: docker pull ghcr.io/kaminipandey/index-test:123
